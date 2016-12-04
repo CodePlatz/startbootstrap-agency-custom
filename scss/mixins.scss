@@ -64,6 +64,16 @@
   -o-background-size: cover;
 }
 
+// Text Shadow Mixin
+
+@mixin text-shadow-15 {
+  text-shadow: 4px 3px 0 rgba(0, 0, 0, 0.15);
+}
+
+@mixin text-shadow-35 {
+  text-shadow: 4px 3px 0 rgba(0, 0, 0, 0.35);
+}
+
 // Font Mixins
 
 @mixin serif-font {
