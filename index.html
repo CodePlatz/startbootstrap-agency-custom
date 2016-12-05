@@ -11,23 +11,25 @@
     <title>Groupifier</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
 
-    <!-- Custom Fonts -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <!-- Font Awesome (font icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kaushan+Script">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700">
 
     <!-- Theme CSS -->
-    <link href="css/main.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="css/main.css">
     
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
 </head>
@@ -86,7 +88,7 @@
                     <div class="intro-text" style="background-image: url('img/slider/slider-1.jpg')">
                         <div class="intro-lead-in">Welcome To Groupifier!</div>
                         <div class="intro-heading">It's Nice To Meet You</div>
-                        <a href="#services" class="page-scroll btn btn-xl">Who are we?</a>
+                        <a href="#about" class="page-scroll btn btn-xl">Who are we?</a>
                     </div>
                 </div>
                 
@@ -94,7 +96,7 @@
                     <div class="intro-text" style="background-image: url('img/slider/slider-2.jpg')">
                         <div class="intro-lead-in">Group in!</div>
                         <div class="intro-heading">Have questions?</div>
-                        <a href="#services" class="page-scroll btn btn-xl">See how it works</a>
+                        <a href="#concept" class="page-scroll btn btn-xl">See how it works</a>
                     </div>
                 </div>
                 
@@ -102,7 +104,7 @@
                     <div class="intro-text" style="background-image: url('img/slider/slider-3.jpg')">
                         <div class="intro-lead-in">Meet new people</div>
                         <div class="intro-heading">Try it now!</div>
-                        <a href="#services" class="page-scroll btn btn-xl">Register and fill out our survey</a>
+                        <a href="#sign-in" class="page-scroll btn btn-xl">Register and fill out our survey</a>
                     </div>
                 </div>
             </div>
@@ -120,7 +122,7 @@
     </header>
     
     <!-- Services Section -->
-    <section id="about">
+    <section id="about" class="bg-light-gray">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -156,9 +158,7 @@
                     <ul class="timeline">
                         <li>
                             <div class="timeline-image">
-                                <span class="fa-stack fa-5x">
-                                    <i class="fa fa-user fa-stack-1x"></i>
-                                </span>
+                                <span class="timeline-icon fa fa-user"></span>
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -172,9 +172,7 @@
                         </li>
                         <li class="timeline-inverted">
                             <div class="timeline-image">
-                                <span class="fa-stack fa-5x">
-                                    <i class="fa fa-list-alt fa-stack-1x"></i>
-                                </span>
+                                <span class="timeline-icon fa fa-list-alt"></span>
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -188,9 +186,7 @@
                         </li>
                         <li>
                             <div class="timeline-image">
-                                <span class="fa-stack fa-5x">
-                                    <i class="fa fa-group fa-stack-1x"></i>
-                                </span>
+                                <span class="timeline-icon fa fa-group"></span>
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -204,9 +200,7 @@
                         </li>
                         <li class="timeline-inverted">
                             <div class="timeline-image">
-                                <span class="fa-stack fa-5x">
-                                    <i class="fa fa-comment fa-stack-1x"></i>
-                                </span>
+                                <span class="timeline-icon fa fa-comment"></span>
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -242,8 +236,8 @@
             </div>
             <div class="row">
                 <div class="col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
-                    <form id="registerForm" autocomplete="off" novalidate onsubmit="return: false;">
-                        <div class="form-group">
+                    <form id="registerForm" autocomplete="off" novalidate onsubmit="return false;">
+                        <div class="form-group has-feedback">
                             <input type="text" class="form-control" placeholder="First Name" id="first-name" required data-validation-required-message="Please enter your first name.">
                             <p class="help-block text-danger"></p>
                         </div>
@@ -257,7 +251,7 @@
                         </div>
                         <div class="form-group">
                             <div id="success"></div>
-                            <button type="submit" class="btn btn-xl btn-block">Sign Up</button>
+                            <button type="submit" class="btn btn-xl btn-block">Sign Up <i class="fa fa-user-plus"></i></button>
                         </div>
                     </form>
                 </div>
@@ -293,44 +287,8 @@
         </div>
     </footer>
 
-    <!-- Portfolio Modals -->
-    <!-- Use the modals below to showcase details about your portfolio projects! -->
-
-    <!-- Portfolio Modal -->
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl">
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 col-lg-offset-2">
-                            <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <h2>Project Name</h2>
-                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                <img class="img-responsive img-centered" src="img/portfolio/roundicons-free.png" alt="">
-                                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                <p>
-                                    <strong>Want these icons in this portfolio item sample?</strong>You can download 60 of them for free, courtesy of <a href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc">RoundIcons.com</a>, or you can purchase the 1500 icon set <a href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc">here</a>.</p>
-                                <ul class="list-inline">
-                                    <li>Date: July 2014</li>
-                                    <li>Client: Round Icons</li>
-                                    <li>Category: Graphic Design</li>
-                                </ul>
-                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
+    <!-- Modals -->
+    
     <!-- Privacy Policy -->
     <div id="privacy-policy" class="modal fade" tabindex="-1">
         <div class="modal-dialog modal-lg">
@@ -438,18 +396,20 @@
                     <h4 class="modal-title">Sign In</h4>
                 </div>
                 <div class="modal-body">
-                    <form id="loginForm" autocomplete="off" novalidate onsubmit="return: false;">
-                        <div class="form-group">
+                    <form id="loginForm" autocomplete="off" novalidate onsubmit="return false;">
+                        <div class="form-group form-group-lg has-feedback">
                             <input type="email" class="form-control" placeholder="Email" id="email" required data-validation-required-message="Please enter your email address.">
+                            <span class="form-control-feedback fa fa-envelope"></span>
                             <p class="help-block text-danger"></p>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group form-group-lg has-feedback">
                             <input type="password" class="form-control" placeholder="Password" id="password" required data-validation-required-message="Please enter your password.">
+                            <span class="form-control-feedback fa fa-key"></span>
                             <p class="help-block text-danger"></p>
                         </div>
                         <div class="form-group">
                             <div id="success"></div>
-                            <button type="submit" class="btn btn-xl btn-block">Sign In</button>
+                            <button type="submit" class="btn btn-primary btn-block btn-lg">Sign In <i class="fa fa-sign-in"></i></button>
                         </div>
                     </form>
                 </div>
@@ -461,10 +421,10 @@
     </div>
     
     <!-- jQuery -->
-    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
@@ -474,7 +434,7 @@
     <script src="js/register.js"></script>
     
     <!-- Theme JavaScript -->
-    <script src="js/agency.js"></script>
+    <script src="js/main.js"></script>
 
 </body>
 

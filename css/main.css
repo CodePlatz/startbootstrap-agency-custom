@@ -46,7 +46,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #222222; }
 
 .btn {
-  text-shadow: 0 1px 0 #000000; }
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; }
 
 .btn-primary {
   color: white;
@@ -89,7 +89,8 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   border-radius: 3px;
   font-size: 18px;
-  padding: 20px 40px; }
+  padding: 20px 40px;
+  text-shadow: 0 1px 0 #000000; }
   .btn-xl:focus, .btn-xl.focus {
     color: white;
     background-color: #00425f;
@@ -114,6 +115,30 @@ h1, h2, h3, h4, h5, h6 {
   .btn-xl .badge {
     color: #006692;
     background-color: white; }
+
+.form-group .form-control {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  .form-group .form-control:focus {
+    border-color: #006692;
+    box-shadow: none; }
+.form-group ::-webkit-input-placeholder {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  color: #eeeeee; }
+.form-group :-moz-placeholder {
+  /* Firefox 18- */
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  color: #eeeeee; }
+.form-group ::-moz-placeholder {
+  /* Firefox 19+ */
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  color: #eeeeee; }
+.form-group :-ms-input-placeholder {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  color: #eeeeee; }
 
 .navbar-custom {
   background-color: white;
@@ -234,63 +259,6 @@ section {
     font-weight: 400;
     margin-bottom: 50px; }
 
-.service-heading {
-  margin: 15px 0;
-  text-transform: none; }
-
-#portfolio .portfolio-item {
-  margin: 0 0 15px;
-  right: 0; }
-  #portfolio .portfolio-item .portfolio-link {
-    display: block;
-    position: relative;
-    max-width: 400px;
-    margin: 0 auto; }
-    #portfolio .portfolio-item .portfolio-link .portfolio-hover {
-      background: rgba(0, 102, 146, 0.1);
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-      transition: all ease 0.5s;
-      -webkit-transition: all ease 0.5s;
-      -moz-transition: all ease 0.5s; }
-      #portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
-        opacity: 1; }
-      #portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
-        position: absolute;
-        width: 100%;
-        height: 20px;
-        font-size: 20px;
-        text-align: center;
-        top: 50%;
-        margin-top: -12px;
-        color: white; }
-        #portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i {
-          margin-top: -12px; }
-        #portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h3,
-        #portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h4 {
-          margin: 0; }
-  #portfolio .portfolio-item .portfolio-caption {
-    max-width: 400px;
-    margin: 0 auto;
-    background-color: white;
-    text-align: center;
-    padding: 25px; }
-    #portfolio .portfolio-item .portfolio-caption h4 {
-      text-transform: none;
-      margin: 0; }
-    #portfolio .portfolio-item .portfolio-caption p {
-      font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
-      font-style: italic;
-      font-size: 16px;
-      margin: 0; }
-#portfolio * {
-  z-index: 2; }
-
-@media (min-width: 767px) {
-  #portfolio .portfolio-item {
-    margin: 0 0 30px; } }
 .timeline {
   list-style: none;
   padding: 0;
@@ -345,6 +313,14 @@ section {
         font-size: 10px;
         margin-top: 12px;
         line-height: 14px; }
+      .timeline > li .timeline-image .timeline-icon {
+        font-size: 3em;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -moz-transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%); }
     .timeline > li.timeline-inverted > .timeline-panel {
       float: right;
       text-align: left;
@@ -390,6 +366,8 @@ section {
         font-size: 13px;
         margin-top: 16px;
         line-height: 18px; }
+      .timeline > li .timeline-image .timeline-icon {
+        font-size: 4em; }
     .timeline > li.timeline-inverted > .timeline-panel {
       float: right;
       text-align: left;
@@ -407,6 +385,8 @@ section {
         font-size: 18px;
         margin-top: 30px;
         line-height: 26px; }
+      .timeline > li .timeline-image .timeline-icon {
+        font-size: 5em; }
     .timeline > li.timeline-inverted > .timeline-panel {
       padding: 0 20px 20px; } }
 @media (min-width: 1200px) {
@@ -438,31 +418,6 @@ section#sign-up {
       height: auto; }
     section#sign-up .form-group textarea.form-control {
       height: 236px; }
-  section#sign-up .form-control:focus {
-    border-color: #006692;
-    box-shadow: none; }
-  section#sign-up ::-webkit-input-placeholder {
-    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: #eeeeee; }
-  section#sign-up :-moz-placeholder {
-    /* Firefox 18- */
-    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: #eeeeee; }
-  section#sign-up ::-moz-placeholder {
-    /* Firefox 19+ */
-    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: #eeeeee; }
-  section#sign-up :-ms-input-placeholder {
-    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: #eeeeee; }
   section#sign-up .text-danger {
     color: #e74c3c; }
 
